@@ -1,0 +1,2 @@
+name = "anuchunduridevops"
+location = "swedencentral"

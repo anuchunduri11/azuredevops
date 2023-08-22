@@ -1,6 +1,6 @@
 #!/bin/sh
 
-RESOURCE_GROUP_NAME="anuchunduridevops-rg"
+RESOURCE_GROUP_NAME="anu-chunduri"
 STORAGE_ACCOUNT_NAME="anuchunduridevopssa"
 LOCATION="swedencentral"
 
