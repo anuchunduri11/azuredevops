@@ -12,7 +12,7 @@ terraform {
 		resource_group_name = "anu-chunduri"
 		storage_account_name = "anuchunduridevopssa"
 		container_name = "tfstate"
-		key = "aks-terraform.tfstate"
+		key = "aks-ingressaddon-terraform.tfstate"
 	}
 }
 
@@ -47,15 +47,19 @@ resource "azurerm_kubernetes_cluster" "aks" {
 		vnet_subnet_id = data.azurerm_subnet.aks_subnet.id
 	}
 	
-	ingress_application_gateway {
-		gateway_id = "/subscriptions/7a70fcbd-d2c2-4017-bfe5-6d89c10285fe/resourceGroups/anuchunduridevops-rg/providers/Microsoft.Network/applicationGateways/anuchunduridevopsappgw"  
-	}
+#	ingress_application_gateway {
+#		gateway_id = "/subscriptions/7a70fcbd-d2c2-4017-bfe5-6d89c10285fe/resourceGroups/anuchunduridevops-rg/providers/Microsoft.Network/applicationGateways/anuchunduridevopsappgw"  
+#	}
 
 	linux_profile {
 		admin_username = "ubuntu"
 		ssh_key {
 			key_data = var.ssh_public_key
 		}
+	}
+	
+	network_profile {
+		network_plugin = "azure"		
 	}
 }
 
