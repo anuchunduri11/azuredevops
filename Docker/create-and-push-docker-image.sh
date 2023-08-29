@@ -1,8 +1,13 @@
 #!/bin/sh
 
-# build docker image
+# Choose one of the two ways to build a docker image for the application 
+# based on your system architecture and target architecture
+# build Option 1: docker image built on linux/amd64 compatible system to run on linux/amd64 system
 docker build . -t simple-python-app
 echo "succefully build docker image!"
+
+#build Option 2: docker image being built on arm64 system to run on linux/amd64 system 
+# docker buildx build --platform linux/amd64 . -t simple-python-app
 
 # login to ACR via Azure CLI
 az acr login --name anuchunduridevopsacr

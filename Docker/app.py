@@ -1,3 +1,5 @@
+#!/usr/local/bin/python3
+
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
 class MyHandler(BaseHTTPRequestHandler):
@@ -15,7 +17,7 @@ class MyHandler(BaseHTTPRequestHandler):
  \    \         __/
   \____\_______/
 
-Hello from Python App running as a Docker container on Azure Kubernetes Service exposed using Azure Application Gateway Ingress
+Hello from Python App running as a Docker container on Azure Kubernetes Service exposed using Azure Application Gateway Ingress Controller
 		''')
 
 def run():

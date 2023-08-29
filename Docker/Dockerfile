@@ -1,5 +1,10 @@
-FROM ubuntu:22.04
+FROM python:3.10
+
+#Create directory for application and expose required port
 RUN mkdir /app
-ADD . /app
+COPY . /app
+EXPOSE 8080
 WORKDIR /app
-CMD ["python3", "app.py"]
+
+#Run application
+CMD ["python", "app.py"]
