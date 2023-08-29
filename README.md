@@ -6,5 +6,3 @@ An end-to-end project dealing with
 4. using Terraform to deploy an Azure Application Gateway
 5. Enabling Application Gateway Ingress Controller add-on on AKS and to expose the application to the internet using the existing Application Gateway.
 6. (TBD) Finally, the entire deployment setup is going to be automated using Azure DevOps.
-
-#TODO
